@@ -1,41 +1,81 @@
+import aiEngineerAssociate from "../components/files/certificates/Ai-Engineer-Associate.pdf";
+import cursorHackathon from "../components/files/certificates/cursor hackaton.png";
+import herCommerceHackathon from "../components/files/certificates/HerCommerce Hackathon Certification of participation (1).pdf";
+import profilePhoto from "../components/files/certificates/photo_2026-05-14_21-52-24.jpg";
+import programmingFundamentals from "../components/files/certificates/programing fundamental betty _ Udacity.pdf";
+import webDevelopmentPhp from "../components/files/certificates/web-development PHP.pdf";
+
 export const certificationsData = [
   {
     id: 1,
-    title: "Introduction to Back-End Development",
-    issuer: "Meta / Coursera",
-    date: "Apr 2026",
-    credentialId: "M0OEHXPLLIQW",
-    img: "/certificates/cert1.png",
-    verify: "https://coursera.org/verify/M0OEHXPLLIQW",
-    tags: ["Backend", "APIs", "Web Development"],
+    title: "AI Engineer Associate",
+    issuer: "AI / Certification",
+    date: "",
+    credentialId: "",
+    img: aiEngineerAssociate,
+    verify: aiEngineerAssociate,
+    tags: ["AI", "Certification"],
     description:
-      "Developed a strong foundation in modern back-end engineering, covering server-side architecture, databases, REST APIs, authentication fundamentals, version control, and deployment workflows. Gained practical understanding of how scalable web applications are structured, maintained, and optimized for production environments.",
+      "Learned the foundations of AI engineering, model workflows, and how to build practical AI-enabled solutions.",
   },
-
   {
     id: 2,
-    title: "Introduction to TensorFlow for AI, ML & Deep Learning",
-    issuer: "DeepLearning.AI / Coursera",
-    date: "Apr 2026",
-    credentialId: "CFHM5TP9RIAM",
-    img: "/certificates/cert2.png",
-    verify: "https://coursera.org/verify/CFHM5TP9RIAM",
-    tags: ["TensorFlow", "AI", "Machine Learning"],
+    title: "HerCommerce Hackathon - Participation",
+    issuer: "HerCommerce",
+    date: "",
+    credentialId: "",
+    img: herCommerceHackathon,
+    verify: herCommerceHackathon,
+    tags: ["Hackathon", "Participation"],
     description:
-      "Built foundational knowledge of artificial intelligence and machine learning using TensorFlow. Learned neural networks, model training, evaluation techniques, prediction systems, and real-world AI workflows. Strengthened the ability to design and implement intelligent solutions for practical business and product use cases.",
+      "Learned how to collaborate on a product idea, solve a challenge under time pressure, and present a domain-focused solution.",
   },
-
   {
     id: 3,
-    title: "Build Your Own Responsive Website",
-    issuer: "CCBP 4.0 Academy",
-    date: "Jun 2025",
-    credentialId: "FHCDQHQLPK",
-    img: "/certificates/cert3.png",
-    verify:
-      "https://certificates.ccbp.in/academy/build-your-own-responsive-website?id=FHCDQHQLPK",
-    tags: ["HTML", "CSS", "Bootstrap", "Responsive Design"],
+    title: "Programming Fundamentals (Udacity)",
+    issuer: "Udacity",
+    date: "",
+    credentialId: "",
+    img: programmingFundamentals,
+    verify: programmingFundamentals,
+    tags: ["Programming", "Fundamentals"],
     description:
-      "Designed and developed responsive, mobile-first websites using HTML, CSS, and Bootstrap with a focus on clean layouts, reusable UI components, accessibility, and cross-device compatibility. Enhanced front-end development skills by creating professional interfaces optimized for performance and user experience.",
+      "Built core programming foundations including logic, problem solving, variables, control flow, and structured thinking.",
+  },
+  {
+    id: 4,
+    title: "Web Development (PHP)",
+    issuer: "Web Development",
+    date: "",
+    credentialId: "",
+    img: webDevelopmentPhp,
+    verify: webDevelopmentPhp,
+    tags: ["Web Development", "PHP"],
+    description:
+      "Learned server-side web development concepts with PHP and how dynamic web applications are built.",
+  },
+  {
+    id: 5,
+    title: "Cursor Hackathon Participation",
+    issuer: "Cursor Hackathon",
+    date: "",
+    credentialId: "",
+    img: cursorHackathon,
+    verify: cursorHackathon,
+    tags: ["Hackathon", "Participation"],
+    description:
+      "Participated in a fast-paced build event and learned how to work quickly, test ideas, and ship a working prototype.",
+  },
+  {
+    id: 6,
+    title: "Presidential Award",
+    issuer: "University Award",
+    date: "",
+    credentialId: "",
+    img: profilePhoto,
+    verify: profilePhoto,
+    tags: ["Photo"],
+    description:
+      "Presidential award recognition from the university for achieving a 3.9 GPA.",
   },
 ];

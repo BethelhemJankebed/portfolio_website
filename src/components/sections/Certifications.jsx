@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { certificationsData } from "../../data/certifications";
 import { MovingBorder } from "../ui/MovingBorders";
 
+const isPdfPreview = (source) => /\.pdf($|\?)/i.test(source || "");
+
 // Verified Badge Icon
 const VerifiedIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -33,20 +35,28 @@ const CertCard = ({ cert, index }) => (
       {/* FRONT SIDE */}
       <div className="absolute inset-0 rounded-xl overflow-hidden border border-black/10 bg-[rgba(255,255,255,0.72)] backdrop-blur-md shadow-xl [backface-visibility:hidden] dark:border-white/10 dark:bg-[rgba(3,0,20,0.72)]">
         {cert.img && (
-          <div className="relative h-44 overflow-hidden">
-            <img
-              src={cert.img}
-              alt={cert.title}
-              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/10 to-transparent dark:from-gray-900 dark:via-gray-900/20" />
+          <div className="relative h-44 overflow-hidden bg-white dark:bg-black/40">
+            {isPdfPreview(cert.img) ? (
+              <iframe
+                src={cert.img}
+                title={cert.title}
+                className="w-full h-full border-0"
+              />
+            ) : (
+              <img
+                src={cert.img}
+                alt={cert.title}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-white/10 to-transparent dark:from-gray-900/60 dark:via-gray-900/10" />
           </div>
         )}
 
         <div className="p-5">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-xs font-mono font-semibold tracking-wider uppercase text-indigo-700 dark:text-cyan-300">
-              {cert.issuer}
+              {cert.issuer || "Certificate"}
             </span>
             <VerifiedIcon />
           </div>
@@ -72,16 +82,16 @@ const CertCard = ({ cert, index }) => (
 
           <div className="flex items-center justify-between pt-3 border-t border-black/10 dark:border-white/10">
             <span className="text-gray-500 dark:text-gray-400 text-xs font-mono truncate max-w-[140px]">
-              ID: {cert.credentialId}
+              {cert.credentialId ? `ID: ${cert.credentialId}` : cert.tags[0] || ""}
             </span>
 
             <a
-              href={cert.verify}
+              href={cert.verify || cert.img}
               target="_blank"
               rel="noopener noreferrer"
               className="ml-auto text-xs font-medium text-blue-700 hover:underline dark:text-cyan-300"
             >
-              Verify ↗
+              Open ↗
             </a>
           </div>
         </div>
@@ -109,12 +119,12 @@ const CertCard = ({ cert, index }) => (
         </div>
 
         <a
-          href={cert.verify}
+          href={cert.verify || cert.img}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-500 to-cyan-500 text-white"
         >
-          Verify Certificate ↗
+          Open File ↗
         </a>
       </div>
     </div>

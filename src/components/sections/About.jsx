@@ -23,20 +23,21 @@ const cardVariants = {
 
 const About = () => {
   // ── Safe destructuring — nothing can be undefined ──
-  const name        = personalData?.name ?? "Developer";
+  const name = personalData?.name ?? "Developer";
   const description = personalData?.description ?? "";
-  const address     = personalData?.address ?? "";
-  const stats       = personalData?.stats ?? {};
-  const skills      = Array.isArray(personalData?.skills) ? personalData.skills : [];
-  const services    = Array.isArray(personalData?.services) ? personalData.services : [];
-  const safeEdus    = Array.isArray(educations) ? educations : [];
-  const availability= personalData?.stats?.availability ?? "Open to Work";
+  const address = personalData?.address ?? "";
+  const stats = personalData?.stats ?? {};
+  const skills = Array.isArray(personalData?.skills) ? personalData.skills : [];
+  const services = Array.isArray(personalData?.services)
+    ? personalData.services
+    : [];
+  const safeEdus = Array.isArray(educations) ? educations : [];
+  const availability = personalData?.stats?.availability ?? "Open to Work";
 
   return (
     <section id="about" className="-mt-px">
       <WavyBackground className="max-w-full py-20 px-4">
         <div className="max-w-6xl mx-auto">
-
           {/* ── Heading ── */}
           <div className="text-center mb-12">
             <p className="text-indigo-700 dark:text-cyan-300 uppercase tracking-[0.3em] text-sm mb-2">
@@ -48,7 +49,6 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-
             {/* ── WHO I AM ── */}
             <motion.div
               custom={0}
@@ -62,7 +62,10 @@ const About = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-indigo-400/10 via-purple-400/5 to-transparent rounded-2xl" />
 
               <div className="mb-4 w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-500/20 flex items-center justify-center">
-                <HiUser className="text-indigo-600 dark:text-indigo-300" size={20} />
+                <HiUser
+                  className="text-indigo-600 dark:text-indigo-300"
+                  size={20}
+                />
               </div>
 
               <h3 className="text-base font-semibold text-gray-800 dark:text-white mb-2">
@@ -107,7 +110,10 @@ const About = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-pink-400/10 via-rose-400/5 to-transparent rounded-2xl" />
 
               <div className="mb-4 w-10 h-10 rounded-xl bg-pink-100 dark:bg-pink-500/20 flex items-center justify-center">
-                <HiLocationMarker className="text-pink-600 dark:text-pink-300" size={20} />
+                <HiLocationMarker
+                  className="text-pink-600 dark:text-pink-300"
+                  size={20}
+                />
               </div>
 
               <h3 className="text-base font-semibold text-gray-800 dark:text-white mb-2">
@@ -123,20 +129,22 @@ const About = () => {
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500" />
                 </span>
                 <span className="text-xs text-pink-600 dark:text-pink-300 font-mono">
-                  Based in India
+                  Based in Ethiopia, Addis Ababa
                 </span>
               </div>
 
               {/* Availability pills — hardcoded, no Object.entries */}
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {["Remote", "Freelance", "Internship", "Relocation"].map((key) => (
-                  <span
-                    key={key}
-                    className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-pink-100/80 dark:bg-pink-500/15 text-pink-700 dark:text-pink-300 border border-pink-200/50 dark:border-pink-500/20 capitalize"
-                  >
-                    {key}
-                  </span>
-                ))}
+                {["Remote", "Freelance", "Internship", "Relocation"].map(
+                  (key) => (
+                    <span
+                      key={key}
+                      className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-pink-100/80 dark:bg-pink-500/15 text-pink-700 dark:text-pink-300 border border-pink-200/50 dark:border-pink-500/20 capitalize"
+                    >
+                      {key}
+                    </span>
+                  )
+                )}
               </div>
 
               <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-pink-300/20 dark:bg-pink-500/10 blur-2xl group-hover:scale-150 transition-transform duration-700" />
@@ -155,7 +163,10 @@ const About = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-violet-400/10 via-purple-400/5 to-transparent rounded-2xl" />
 
               <div className="mb-4 w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-500/20 flex items-center justify-center">
-                <HiAcademicCap className="text-violet-600 dark:text-violet-300" size={20} />
+                <HiAcademicCap
+                  className="text-violet-600 dark:text-violet-300"
+                  size={20}
+                />
               </div>
 
               <h3 className="text-base font-semibold text-gray-800 dark:text-white mb-4">
@@ -217,20 +228,30 @@ const About = () => {
               </h3>
 
               <div className="flex flex-wrap gap-1.5">
-  {[
-    "Next.js", "React.js", "JavaScript", "TypeScript",
-    "Python", "Django", "FastAPI", "Node.js",
-    "Tailwind CSS", "Framer Motion", "MongoDB",
-    "PostgreSQL", "Git", "Docker"
-  ].map((skill) => (
-    <span
-      key={skill}
-      className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-sky-100/80 dark:bg-sky-500/15 text-sky-700 dark:text-sky-300 border border-sky-200/50 dark:border-sky-500/20"
-    >
-      {skill}
-    </span>
-  ))}
-</div>
+                {[
+                  "Next.js",
+                  "React.js",
+                  "JavaScript",
+                  "TypeScript",
+                  "Python",
+                  "Django",
+                  "FastAPI",
+                  "Node.js",
+                  "Tailwind CSS",
+                  "Framer Motion",
+                  "MongoDB",
+                  "PostgreSQL",
+                  "Git",
+                  "Docker",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-sky-100/80 dark:bg-sky-500/15 text-sky-700 dark:text-sky-300 border border-sky-200/50 dark:border-sky-500/20"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
 
               <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-sky-300/20 dark:bg-sky-500/10 blur-2xl group-hover:scale-150 transition-transform duration-700" />
             </motion.div>
@@ -248,7 +269,10 @@ const About = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-cyan-400/10 via-sky-400/5 to-transparent rounded-2xl" />
 
               <div className="mb-4 w-10 h-10 rounded-xl bg-cyan-100 dark:bg-cyan-500/20 flex items-center justify-center">
-                <HiLightningBolt className="text-cyan-600 dark:text-cyan-300" size={20} />
+                <HiLightningBolt
+                  className="text-cyan-600 dark:text-cyan-300"
+                  size={20}
+                />
               </div>
 
               <h3 className="text-base font-semibold text-gray-800 dark:text-white mb-3">
@@ -256,29 +280,32 @@ const About = () => {
               </h3>
 
               <div className="flex flex-wrap gap-2">
-                {["Full Stack Development", "SaaS Products", "AI Integrations", "Real-World Projects"].map(
-                  (tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-100/80 dark:bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 border border-cyan-200/50 dark:border-cyan-500/20"
-                    >
-                      {tag}
-                    </span>
-                  )
-                )}
+                {[
+                  "Full Stack Development",
+                  "SaaS Products",
+                  "AI Integrations",
+                  "Real-World Projects",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-100/80 dark:bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 border border-cyan-200/50 dark:border-cyan-500/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
 
               {/* Services — uses safe array */}
               {services.length > 0 && (
                 <div className="mt-4 grid grid-cols-2 gap-2">
                   {[
-  "Full Stack Web Development",
-  "Frontend UI Engineering", 
-  "Backend API Development",
-  "SaaS Product Development",
-  "AI Integration",
-  "Performance Optimization"
-].map((service) => (
+                    "Full Stack Web Development",
+                    "Frontend UI Engineering",
+                    "Backend API Development",
+                    "SaaS Product Development",
+                    "AI Integration",
+                    "Performance Optimization",
+                  ].map((service) => (
                     <div
                       key={service}
                       className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-300"
@@ -306,7 +333,10 @@ const About = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-orange-400/10 via-amber-400/5 to-transparent rounded-2xl" />
 
               <div className="mb-4 w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center">
-                <HiBriefcase className="text-orange-600 dark:text-orange-300" size={20} />
+                <HiBriefcase
+                  className="text-orange-600 dark:text-orange-300"
+                  size={20}
+                />
               </div>
 
               <h3 className="text-base font-semibold text-gray-800 dark:text-white mb-3">
@@ -314,16 +344,19 @@ const About = () => {
               </h3>
 
               <div className="flex flex-wrap gap-2">
-                {["Internships", "Freelance Projects", "Startup Collaborations", "Remote Opportunities"].map(
-                  (tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-orange-100/80 dark:bg-orange-500/15 text-orange-700 dark:text-orange-300 border border-orange-200/50 dark:border-orange-500/20"
-                    >
-                      {tag}
-                    </span>
-                  )
-                )}
+                {[
+                  "Internships",
+                  "Freelance Projects",
+                  "Startup Collaborations",
+                  "Remote Opportunities",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 rounded-full text-xs font-medium bg-orange-100/80 dark:bg-orange-500/15 text-orange-700 dark:text-orange-300 border border-orange-200/50 dark:border-orange-500/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
 
               {/* Open to work badge */}
@@ -339,7 +372,6 @@ const About = () => {
 
               <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-orange-300/20 dark:bg-orange-500/10 blur-2xl group-hover:scale-150 transition-transform duration-700" />
             </motion.div>
-
           </div>
         </div>
       </WavyBackground>

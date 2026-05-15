@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { BackgroundBeams } from "../ui/background-beams";
 import { ShootingStars } from "../ui/shooting-stars";
+import { personalData } from "../../data/personal-data";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -13,17 +14,47 @@ const Contact = () => {
     event.preventDefault();
     setStatus("Sending...");
 
+    const formData = new FormData(formRef.current);
+    const name = String(formData.get("name") || "");
+    const email = String(formData.get("email") || "");
+    const message = String(formData.get("message") || "");
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      const subject = encodeURIComponent(`Portfolio message from ${name || email || "visitor"}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\n${message}`
+      );
+
+      const mailto = `mailto:${personalData.email}?subject=${subject}&body=${body}`;
+      const opened = window.open(mailto, "_blank");
+      if (!opened) window.location.href = mailto;
+      setStatus("Taking u to the email app.");
+      return;
+    }
+
     try {
       await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        publicKey
       );
       formRef.current.reset();
       setStatus("Message sent successfully.");
     } catch {
-      setStatus("Unable to send message. Please try again.");
+      const subject = encodeURIComponent(`Portfolio message from ${name || email || "visitor"}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\n${message}`
+      );
+
+      const mailto = `mailto:${personalData.email}?subject=${subject}&body=${body}`;
+      const opened = window.open(mailto, "_blank");
+      if (!opened) window.location.href = mailto;
+      setStatus("Taking u to the email app.");
     }
   };
 

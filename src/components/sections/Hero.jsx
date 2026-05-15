@@ -6,6 +6,7 @@ import { TypewriterEffect } from "../ui/typewriter-effect";
 import { FloatingDock } from "../ui/floating-dock";
 import { personalData } from "../../data/personal-data";
 import { socialMedia } from "../../data/social-media";
+import profilePhoto from "../files/picture/photo_2026-05-14_21-35-45.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { FiDownload } from "react-icons/fi";
 import {
@@ -25,11 +26,15 @@ const iconMap = {
 };
 
 const words = [
-  { text: "Frontend" },
-  { text: "Developer" },
-  { text: "React", className: "text-purple-700 dark:text-purple-300" },
-  { text: "&", className: "text-gray-900 dark:text-white" },
-  { text: "Three.js", className: "text-indigo-700 dark:text-cyan-300" },
+  [{ text: "3rd year Software Engineering student" }],
+  [
+    { text: "Frontend engineer" },
+    { text: "React and Tailwind CSS", className: "text-purple-700 dark:text-cyan-300" },
+  ],
+  [
+    { text: "Backend" },
+    { text: "Node.js and Java", className: "text-indigo-700 dark:text-cyan-300" },
+  ],
 ];
 
 const Hero = () => {
@@ -246,22 +251,13 @@ const Hero = () => {
               {/* Profile image */}
               <div className="absolute inset-[6px] overflow-hidden rounded-full border border-cyan-500/20">
                 <img
-                  src="/profile.png"
+                  src={profilePhoto}
                   alt={personalData.name}
                   className="w-full h-full object-cover object-top"
                 />
               </div>
 
-              {/* Floating badge */}
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-                className="absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-cyan-500/40 bg-white/10 dark:bg-black/50 px-4 py-1.5 backdrop-blur-md shadow-md whitespace-nowrap"
-              >
-                <span className="text-xs font-mono text-indigo-700 dark:text-cyan-300">
-                  Available for work
-                </span>
-              </motion.div>
+              {/* Floating badge removed as requested */}
 
             </div>
           </div>

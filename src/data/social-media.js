@@ -1,32 +1,21 @@
-
 export const socialMedia = [
   {
     id: 1,
     name: "GitHub",
-    url: "https://github.com/Aniketsahoo228",
+    url: "https://github.com/BethelhemJankebed",
     icon: "BsGithub",
   },
   {
     id: 2,
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/aniket-sahoo-b17496299/",
+    url: "https://www.linkedin.com/in/bethelhem-jankebed-b4a236227/",
     icon: "BsLinkedin",
   },
   {
     id: 3,
     name: "Email",
-    url: "mailto:aniketsahoo205@gmail.com",
+    url: "mailto:bettyj4565@gmail.com",
     icon: "BsEnvelopeFill",
   },
-  {
-    id: 4,
-    name: "X",
-    url: "https://x.com/aniket_sah34572",
-    icon: "BsTwitterX",
-  },
-  { id: 5, 
-    name: "Phone", 
-    url: "tel:+91-7978244564", 
-    icon: "BsTelephoneFill" 
-  },
+  { id: 4, name: "Phone", url: "tel:+251945655894", icon: "BsTelephoneFill" },
 ];

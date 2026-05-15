@@ -1,31 +1,32 @@
+import profilePhoto from "../components/files/picture/photo_2026-05-14_21-35-45.jpg";
+import resumePdf from "../components/files/resume/My Cv 2026 (1) (1).pdf";
 
 export const personalData = {
-  name: "Aniket Sahoo",
-  profile: "/profile.png",
-  designation: "Full Stack Developer",
+  name: "Bethelhem Jankebed",
+  profile: profilePhoto,
+  designation: "Frontend Developer",
 
   description:
-  "Full Stack Developer with a focus on building production-grade web applications, scalable APIs, and AI-integrated systems. Proficient in Next.js, React, Python (Django/FastAPI), and modern DevOps tooling. I care deeply about performance, clean architecture, and shipping products that actually work in the real world.",
+    "Frontend Developer focused on building accessible, performant web applications and delightful user interfaces. Skilled with React, modern JavaScript, and UI-focused tooling.",
 
-shortBio:
-  "I engineer fast, scalable web products — from pixel-perfect frontends to robust backend systems.",
+  shortBio: "I build user-focused frontends and interactive web experiences.",
 
-  email: "aniketsahoo205@gmail.com",
-  phone: "+91 7978244564",
-  address: "Bhubaneswar, Odisha, India",
+  email: "bettyj4565@gmail.com",
+  phone: "+251945655894",
+  address: "Addis Ababa, Ethiopia",
 
-  github: "https://github.com/Aniketsahoo228",
-  linkedIn: "https://www.linkedin.com/in/aniket-sahoo-b17496299/",
-  twitter: "https://x.com/aniket_sah34572",
+  github: "https://github.com/BethelhemJankebed",
+  linkedIn: "https://www.linkedin.com/in/bethelhem-jankebed-b4a236227/",
+  twitter: "",
 
-  resume: "/Aniket_Sahoo_FS.pdf",
+  resume: resumePdf,
 
   stats: {
-  githubStreak: "100+ Day Streak",
-  projects: "10+ Shipped",
-  availability: "Open to Work",
-  experience: "Freelance & Products",
-},
+    githubStreak: "",
+    projects: "",
+    availability: "",
+    experience: "",
+  },
 
   skills: [
     "Next.js",
@@ -54,10 +55,9 @@ shortBio:
   ],
 
   education: {
-    degree: "Bachelor of Technology",
-    institute:
-      "Kalinga Institute of Industrial Technology (KIIT)",
-    status: "Pursuing",
+    degree: "Bachelor in Software Engineering",
+    institute: "Addis Ababa Science and Technology University (AASTU)",
+    status: "3rd Year Student",
   },
 
   availability: {

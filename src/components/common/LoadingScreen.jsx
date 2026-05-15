@@ -172,9 +172,9 @@ const LoadingScreen = () => {
               >
                 <span style={{ ...s.sym, ...clsMap[l.cls] }}>{l.sym}</span>
                 <span style={s.logText}>
-                  <span style={s.t1}>{l.text.slice(0, 18)}</span>
-                  <span style={s.t2}>{l.text.slice(18, 36)}</span>
-                  <span style={s.t3}>{l.text.slice(36)}</span>
+                  <span style={s.t1}>{String(l.text ?? "").slice(0, 18)}</span>
+                  <span style={s.t2}>{String(l.text ?? "").slice(18, 36)}</span>
+                  <span style={s.t3}>{String(l.text ?? "").slice(36)}</span>
                 </span>
               </motion.div>
             ))}

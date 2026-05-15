@@ -1,5 +1,21 @@
 export const experiences = [
   {
+    id: 8,
+    title: "Software Engineer Intern",
+    company: "YugaYatra Retail (OPC) Private Ltd",
+    duration: "(Apr 2026 - Present)",
+    description:
+      "Contributing to real-world web projects by building modern applications, creating responsive user interfaces, optimizing performance, and collaborating on production workflows .",
+  },
+  {
+    id: 7,
+    title: "Tech for Dev — Frontend Developer Scholarship Winner & Trainee",
+    company: "Tech for Dev",
+    duration: "(Sep 2025 - Sep 2026)",
+    description:
+      "Selected as a scholarship winner for the Tech for Dev Frontend Developer program. Participating in a 12-month program consisting of a 6-month internship followed by a 6-month training rotation (Sep 2025 - Sep 2026), focused on frontend engineering and real-world product development.",
+  },
+  {
     id: 1,
     title: "Open Source Learner",
     company: "GitHub",
@@ -41,26 +57,10 @@ export const experiences = [
   },
   {
   id: 6,
-  title: "AI Workflow Builder",
-  company: "Independent Projects",
-  duration: "(Jun 2025 - Present)",
-  description:
-    "Building AI-powered tools, intelligent automation systems, and workflow-driven web solutions using modern frameworks, API integrations, and scalable architectures. Focused on productivity, automation, and real-world business use cases.",
-},
-{
-  id: 7,
-  title: "SaaS Product Builder",
-  company: "Independent Projects",
-  duration: "(Aug 2025 - Present)",
-  description:
-    "Ideating, designing, and launching SaaS MVPs from scratch — managing product strategy, feature planning, UI development, backend systems, and iterative improvements based on user feedback.",
-},
-  {
-  id: 8,
-  title: "Software Engineer Intern",
-  company: "YugaYatra Retail (OPC) Private Ltd",
-  duration: "(Apr 2026 - Present)",
-  description:
-  "Contributing to real-world web projects by building modern applications, creating responsive user interfaces, optimizing performance, and collaborating on production workflows .",
-},
+    title: "AI Workflow Builder",
+    company: "Independent Projects",
+    duration: "(Jun 2025 - Present)",
+    description:
+      "Building AI-powered tools, intelligent automation systems, and workflow-driven web solutions using modern frameworks, API integrations, and scalable architectures. Focused on productivity, automation, and real-world business use cases.",
+  },
 ];

@@ -25,64 +25,13 @@ export const TypewriterEffect = ({
   className,
   cursorClassName,
 }) => {
-  const textGroups = useMemo(
-    () => [
-      words,
+  const textGroups = useMemo(() => {
+    if (Array.isArray(words[0])) {
+      return words;
+    }
 
-      [
-    { text: "Full-Stack" },
-    { text: "Developer", className: "text-purple-700 dark:text-purple-300" },
-    { text: "Next.js", className: "text-cyan-600 dark:text-cyan-300" },
-    { text: "&", className: "text-black dark:text-white" },
-    { text: "FastAPI", className: "text-indigo-700 dark:text-indigo-300" },
-  ],
-
-  [
-    { text: "Creative" },
-    { text: "Frontend" },
-    { text: "Developer", className: "text-pink-600 dark:text-pink-400" },
-    { text: "GSAP", className: "text-violet-600 dark:text-violet-300" },
-    { text: "&", className: "text-black dark:text-white" },
-    { text: "Three.js", className: "text-sky-600 dark:text-sky-300" },
-  ],
-
-  [
-    { text: "Backend" },
-    { text: "API" },
-    { text: "Developer", className: "text-cyan-600 dark:text-cyan-300" },
-    { text: "Node.js", className: "text-green-600 dark:text-green-300" },
-    { text: "&", className: "text-black dark:text-white" },
-    { text: "Django", className: "text-emerald-600 dark:text-emerald-300" },
-  ],
-
-  [
-    { text: "Modern" },
-    { text: "UI/UX" },
-    { text: "Developer", className: "text-violet-600 dark:text-violet-300" },
-    { text: "React", className: "text-sky-600 dark:text-sky-300" },
-    { text: "&", className: "text-black dark:text-white" },
-    { text: "Animations", className: "text-pink-600 dark:text-pink-400" },
-  ],
-
-  [
-    { text: "Software" },
-    { text: "Developer", className: "text-indigo-700 dark:text-cyan-300" },
-    { text: "Scalable", className: "text-orange-600 dark:text-orange-300" },
-    { text: "&", className: "text-black dark:text-white" },
-    { text: "Clean", className: "text-teal-600 dark:text-teal-300" },
-    { text: "Code" },
-  ],
-
-  [
-    { text: "AI" },
-    { text: "Developer", className: "text-sky-600 dark:text-sky-300" },
-    { text: "Automation", className: "text-purple-700 dark:text-purple-300" },
-    { text: "&", className: "text-black dark:text-white" },
-    { text: "Integration", className: "text-pink-600 dark:text-pink-400" },
-  ],
-    ],
-    [words]
-  );
+    return [words];
+  }, [words]);
 
   const [groupIndex, setGroupIndex] = useState(0);
   const [displayed, setDisplayed] = useState([]);
