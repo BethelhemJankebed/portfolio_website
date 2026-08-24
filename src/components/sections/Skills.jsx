@@ -75,16 +75,16 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="p-4 rounded-2xl border border-white/30 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md"
+              className="p-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 shadow-sm backdrop-blur-md"
             >
-              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-600 dark:text-cyan-300 mb-2.5">
+              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-700 dark:text-cyan-300 mb-2.5">
                 {cat.category}
               </h3>
               <div className="flex flex-wrap gap-1.5">
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-2.5 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-500/10 text-gray-800 dark:text-gray-200 border border-indigo-100 dark:border-indigo-500/20"
+                    className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-indigo-500/15 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-indigo-500/20"
                   >
                     {skill}
                   </span>

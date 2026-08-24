@@ -47,27 +47,27 @@ const Projects = () => (
     group
   "
 >
-              {/* Title — floats highest */}
+              {/* Title */}
               <CardItem
                 translateZ={100}
                 as="h3"
-                className="text-lg font-bold text-white w-full mb-1"
+                className="text-lg font-bold text-gray-900 dark:text-white w-full mb-1"
               >
                 {project.name}
               </CardItem>
 
-              {/* Description — floats above image */}
+              {/* Description */}
               <CardItem
                 translateZ={80}
                 as="p"
-                className="text-gray-400 text-sm w-full mb-4 line-clamp-2 leading-relaxed"
+                className="text-gray-600 dark:text-gray-300 text-sm w-full mb-4 line-clamp-2 leading-relaxed"
               >
                 {project.description}
               </CardItem>
 
-              {/* Image — base layer */}
+              {/* Image */}
               <CardItem translateZ={80} className="w-full -mx-6 px-6" style={{width: "calc(100% + 3rem)", marginLeft: "-1.5rem"}}>
-                <div className="w-full h-48 rounded-xl overflow-hidden">
+                <div className="w-full h-48 rounded-xl overflow-hidden bg-gray-100 dark:bg-slate-800">
                   {project.img ? (
                     <img
                       src={project.img}
@@ -77,7 +77,7 @@ const Projects = () => (
                       className="w-full h-full object-cover object-top"
                     />
                   ) : (
-                    <div className="w-full h-full bg-white/5 flex items-center justify-center text-gray-600 text-sm">
+                    <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm">
                       No preview
                     </div>
                   )}
@@ -91,8 +91,8 @@ const Projects = () => (
                     <span
                       key={t}
                       className="text-[10px] px-2 py-0.5 rounded-full font-medium
-                        bg-purple-500/15 text-purple-200
-                        border border-purple-500/20"
+                        bg-purple-100 dark:bg-purple-500/15 text-purple-800 dark:text-purple-200
+                        border border-purple-200 dark:border-purple-500/20"
                     >
                       {t}
                     </span>
@@ -110,8 +110,8 @@ const Projects = () => (
                       target="_blank"
                       rel="noreferrer"
                       className="
-                        flex items-center gap-1.5 text-xs font-medium
-                        text-gray-400 hover:text-cyan-300
+                        flex items-center gap-1.5 text-xs font-semibold
+                        text-indigo-600 hover:text-indigo-800 dark:text-cyan-300 dark:hover:text-cyan-200
                         transition-colors duration-200
                       "
                     >
@@ -129,10 +129,10 @@ const Projects = () => (
                       target="_blank"
                       rel="noreferrer"
                       className="
-                        flex items-center gap-1.5 text-xs font-medium
+                        flex items-center gap-1.5 text-xs font-semibold
                         px-4 py-1.5 rounded-full
-                        bg-white text-black
-                        hover:bg-gray-100
+                        bg-slate-900 text-white dark:bg-white dark:text-slate-900
+                        hover:bg-indigo-700 dark:hover:bg-gray-100
                         transition-colors duration-200
                       "
                     >

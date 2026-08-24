@@ -52,7 +52,7 @@ const About = () => {
               viewport={{ once: true }}
               variants={cardVariants}
               whileHover={{ scale: 1.01 }}
-              className="md:col-span-2 relative group rounded-2xl border border-white/30 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
+              className="md:col-span-2 relative group rounded-2xl border border-gray-200 dark:border-white/10 bg-white/90 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-indigo-400/10 via-purple-400/5 to-transparent rounded-2xl" />
 
@@ -103,7 +103,7 @@ const About = () => {
               viewport={{ once: true }}
               variants={cardVariants}
               whileHover={{ scale: 1.01 }}
-              className="relative group rounded-2xl border border-white/30 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
+              className="relative group rounded-2xl border border-gray-200 dark:border-white/10 bg-white/90 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-pink-400/10 via-rose-400/5 to-transparent rounded-2xl" />
 
@@ -143,7 +143,7 @@ const About = () => {
               viewport={{ once: true }}
               variants={cardVariants}
               whileHover={{ scale: 1.01 }}
-              className="md:col-span-2 relative group rounded-2xl border border-white/30 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
+              className="md:col-span-2 relative group rounded-2xl border border-gray-200 dark:border-white/10 bg-white/90 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-violet-400/10 via-purple-400/5 to-transparent rounded-2xl" />
 
@@ -193,7 +193,7 @@ const About = () => {
               viewport={{ once: true }}
               variants={cardVariants}
               whileHover={{ scale: 1.01 }}
-              className="relative group rounded-2xl border border-white/30 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
+              className="relative group rounded-2xl border border-gray-200 dark:border-white/10 bg-white/90 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-sky-400/10 via-blue-400/5 to-transparent rounded-2xl" />
 
@@ -244,7 +244,7 @@ const About = () => {
               viewport={{ once: true }}
               variants={cardVariants}
               whileHover={{ scale: 1.01 }}
-              className="md:col-span-3 relative group rounded-2xl border border-white/30 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
+              className="md:col-span-3 relative group rounded-2xl border border-gray-200 dark:border-white/10 bg-white/90 dark:bg-white/5 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm cursor-default"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-cyan-400/10 via-sky-400/5 to-transparent rounded-2xl" />
 

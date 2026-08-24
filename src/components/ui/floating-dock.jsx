@@ -27,48 +27,20 @@ const FloatingDockMobile = ({
   items,
   className
 }) => {
-  const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2">
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}>
-                  <a
-                    href={item.link}
-                    key={item.name}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900">
-                  <div className="h-4 w-4">{item.icon ?? item.name.charAt(0)}</div>
-                </a>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800">
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-      </button>
+    <div className={cn("flex items-center gap-2 md:hidden flex-wrap justify-center", className)}>
+      {items.map((item) => (
+        <a
+          href={item.link}
+          key={item.name}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={item.name}
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-neutral-200 border border-gray-200 dark:border-neutral-700 shadow-sm hover:scale-105 transition-transform"
+        >
+          <div className="h-5 w-5 flex items-center justify-center">{item.icon ?? item.name.charAt(0)}</div>
+        </a>
+      ))}
     </div>
   );
 };
