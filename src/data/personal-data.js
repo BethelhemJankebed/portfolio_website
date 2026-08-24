@@ -1,15 +1,14 @@
-import profilePhoto from "../components/files/picture/photo_2026-05-14_21-35-45.jpg";
-import resumePdf from "../components/files/resume/My Cv 2026 (1) (1).pdf";
+import resumeImg from "../components/files/resume/bethelhem-cv.png";
 
 export const personalData = {
   name: "Bethelhem Jankebed",
-  profile: profilePhoto,
-  designation: "Frontend Developer",
+  profile: null,
+  designation: "Software Engineer | Full-Stack Developer",
 
   description:
-    "Frontend Developer focused on building accessible, performant web applications and delightful user interfaces. Skilled with React, modern JavaScript, and UI-focused tooling.",
+    "Software developer specializing in full-stack web development, with experience building and maintaining production-ready applications using modern JavaScript and Python technologies. Skilled in developing responsive user interfaces, backend systems, APIs, database-driven applications, and integrating third-party services. Experienced in taking projects from development through deployment, with a strong focus on practical solutions, clean implementation, and user experience.",
 
-  shortBio: "I build user-focused frontends and interactive web experiences.",
+  shortBio: "Building responsive UIs, backend APIs, and production-ready applications with modern JavaScript and Python.",
 
   email: "bettyj4565@gmail.com",
   phone: "+251945655894",
@@ -19,45 +18,52 @@ export const personalData = {
   linkedIn: "https://www.linkedin.com/in/bethelhem-jankebed-b4a236227/",
   twitter: "",
 
-  resume: resumePdf,
+  resume: resumeImg,
 
   stats: {
-    githubStreak: "",
-    projects: "",
-    availability: "",
-    experience: "",
+    gpa: "3.9 / 4.0",
+    honors: "Presidential Award",
+    status: "AASTU SE",
+    experience: "Full-Stack Dev",
   },
 
   skills: [
-    "Next.js",
-    "React.js",
     "JavaScript",
-    "TypeScript",
     "Python",
-    "Django",
-    "FastAPI",
-    "Node.js",
+    "Java",
+    "PHP",
+    "SQL",
+    "React",
+    "Next.js",
+    "React Native",
     "Tailwind CSS",
-    "Framer Motion",
-    "MongoDB",
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "Spring Boot",
     "PostgreSQL",
+    "Neon",
+    "Prisma",
+    "REST APIs",
     "Git",
-    "Docker",
+    "GitHub",
+    "Vercel",
+    "Firebase",
   ],
 
   services: [
-    "Full Stack Web Development",
-    "Frontend UI Engineering",
-    "Backend API Development",
-    "SaaS Product Development",
-    "AI Integration",
-    "Performance Optimization",
+    "Full-Stack Web Development",
+    "Responsive Frontend UIs",
+    "Backend & REST API Development",
+    "Database Architecture & ORMs",
+    "Third-Party API Integration",
+    "Mobile & Web Applications",
   ],
 
   education: {
-    degree: "Bachelor in Software Engineering",
+    degree: "Bachelor of Science in Software Engineering",
     institute: "Addis Ababa Science and Technology University (AASTU)",
-    status: "3rd Year Student",
+    status: "2023 – Present | GPA: 3.9/4.0 (Presidential Award Recipient)",
   },
 
   availability: {
@@ -67,3 +73,4 @@ export const personalData = {
     relocation: true,
   },
 };
+

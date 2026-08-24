@@ -1,66 +1,48 @@
 export const experiences = [
   {
-    id: 8,
-    title: "Software Engineer Intern",
-    company: "YugaYatra Retail (OPC) Private Ltd",
-    duration: "(Apr 2026 - Present)",
-    description:
-      "Contributing to real-world web projects by building modern applications, creating responsive user interfaces, optimizing performance, and collaborating on production workflows .",
-  },
-  {
-    id: 7,
-    title: "Tech for Dev — Frontend Developer Scholarship Winner & Trainee",
-    company: "Tech for Dev",
-    duration: "(Sep 2025 - Sep 2026)",
-    description:
-      "Selected as a scholarship winner for the Tech for Dev Frontend Developer program. Participating in a 12-month program consisting of a 6-month internship followed by a 6-month training rotation (Sep 2025 - Sep 2026), focused on frontend engineering and real-world product development.",
-  },
-  {
     id: 1,
-    title: "Open Source Learner",
-    company: "GitHub",
-    duration: "(Jan 2022 - Present)",
+    title: "Frontend Developer | Scholarship Program",
+    company: "TechForDev",
+    location: "Remote",
+    duration: "Sep 2025 - Present",
     description:
-      "Started my dev journey by experimenting with code daily, maintaining consistent GitHub commits, and building a strong foundation in modern web technologies through hands-on projects.",
+      "Developed GreenSight, a web application serving 250+ users, using React and responsive frontend development. Integrated Maps APIs to deliver interactive, location-based functionality. Collaborated on feature development, API integration, and user experience improvements.",
+    bullets: [
+      "Developed GreenSight, a web application serving 250+ users, using React and responsive frontend development.",
+      "Integrated Maps APIs to deliver interactive, location-based functionality.",
+      "Collaborated on feature development, API integration, and user experience improvements."
+    ],
+    technologies: ["React", "Maps API", "Tailwind CSS", "REST APIs"],
   },
   {
     id: 2,
-    title: "UI/UX Developer",
-    company: "Independent Projects",
-    duration: "(Jun 2023 - Present)",
+    title: "Freelance Software Developer",
+    company: "Freelance / Self-Employed",
+    location: "Remote",
+    duration: "April 2024 - Present",
     description:
-      "Translating ideas and Figma designs into pixel-perfect interfaces with strong visual hierarchy, smooth micro-interactions, and a sharp eye for spacing, typography, and accessibility.",
+      "Developed, maintained, and deployed full-stack applications for local and international clients. Delivered feature development, debugging, software maintenance, and API integrations. Collaborated with clients to deliver production-ready solutions.",
+    bullets: [
+      "Developed, maintained, and deployed full-stack applications for local and international clients.",
+      "Delivered feature development, debugging, software maintenance, and API integrations.",
+      "Collaborated with clients to deliver production-ready solutions."
+    ],
+    technologies: ["React", "Next.js", "Node.js", "Python", "FastAPI", "PostgreSQL"],
   },
   {
     id: 3,
-    title: "Freelance Web Developer",
-    company: "Self Employed",
-    duration: "(Jan 2024 - Present)",
+    title: "Software Development Intern",
+    company: "Yuga Yatra Retail (OPC)",
+    location: "Remote",
+    duration: "May 2026 – Jul 2026",
     description:
-      "Delivering high-quality business websites, portfolio platforms, and custom digital solutions for clients — with a focus on performance, branding, conversions, and mobile-first design.",
-  },
-  {
-    id: 4,
-    title: "Frontend Developer",
-    company: "Independent Projects",
-    duration: "(Jun 2024 - Present)",
-    description:
-      "Engineering premium, responsive UIs and interactive product experiences using React, Next.js, Tailwind CSS, and Framer Motion — from landing pages to full product dashboards.",
-  },
-  {
-    id: 5,
-    title: "API Integration Developer",
-    company: "Independent Projects",
-    duration: "(Jan 2025 - Present)",
-    description:
-      "Integrating third-party services including authentication systems, payment gateways, databases, and automation pipelines into robust, production-ready applications.",
-  },
-  {
-  id: 6,
-    title: "AI Workflow Builder",
-    company: "Independent Projects",
-    duration: "(Jun 2025 - Present)",
-    description:
-      "Building AI-powered tools, intelligent automation systems, and workflow-driven web solutions using modern frameworks, API integrations, and scalable architectures. Focused on productivity, automation, and real-world business use cases.",
+      "Developed web and mobile applications using Flutter and Firebase through real-world projects. Contributed to live projects and collaborated with team members using Google Workspace. Gained hands-on experience in application development, deployment, and digital platforms.",
+    bullets: [
+      "Developed web and mobile applications using Flutter and Firebase through real-world projects.",
+      "Contributed to live projects and collaborated with team members using Google Workspace.",
+      "Gained hands-on experience in application development, deployment, and digital platforms."
+    ],
+    technologies: ["Flutter", "Firebase", "Mobile Apps", "Google Workspace"],
   },
 ];
+

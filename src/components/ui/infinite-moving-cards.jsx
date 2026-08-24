@@ -1,5 +1,6 @@
 import { cn } from "../../lib/utils";
 import React, { useEffect, useState } from "react";
+import { FiCode } from "react-icons/fi";
 
 export const InfiniteMovingCards = ({
   items,
@@ -65,16 +66,12 @@ export const InfiniteMovingCards = ({
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}>
-        {items.map((item) => (
+        {items.map((item, idx) => (
           <li
-            className="relative flex w-[180px] max-w-full shrink-0 flex-col items-center justify-center gap-4 rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.72)] px-8 py-6 backdrop-blur-md md:w-[220px] dark:border-white/10 dark:bg-[rgba(3,0,20,0.72)]"
-            key={item.name}>
-            <img
-              src={item.img}
-              alt={item.name}
-              className="relative z-20 h-16 w-16 object-contain"
-            />
-            <span className="relative z-20 text-center text-sm font-medium leading-[1.6] text-gray-900 dark:text-gray-100">
+            className="relative flex w-[160px] sm:w-[180px] max-w-full shrink-0 flex-col items-center justify-center gap-3 rounded-2xl border border-black/10 bg-white/70 px-6 py-5 backdrop-blur-md dark:border-white/10 dark:bg-[rgba(7,9,30,0.85)] shadow-md"
+            key={`${item.name}-${idx}`}>
+            <CardImage item={item} />
+            <span className="relative z-20 text-center text-xs sm:text-sm font-semibold leading-tight text-gray-900 dark:text-gray-100">
               {item.name}
             </span>
           </li>
@@ -83,3 +80,27 @@ export const InfiniteMovingCards = ({
     </div>
   );
 };
+
+const CardImage = ({ item }) => {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError || !item.img) {
+    return (
+      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-tr from-purple-500/20 to-cyan-500/20 border border-purple-500/30 flex items-center justify-center text-purple-600 dark:text-cyan-300">
+        <FiCode size={24} />
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={item.img}
+      alt={item.name}
+      loading="lazy"
+      decoding="async"
+      onError={() => setHasError(true)}
+      className="relative z-20 h-12 w-12 sm:h-14 sm:w-14 object-contain"
+    />
+  );
+};
+

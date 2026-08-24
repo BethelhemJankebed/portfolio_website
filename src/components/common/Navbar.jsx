@@ -75,7 +75,7 @@ const Navbar = () => {
             backdrop-blur-2xl
             shadow-[0_12px_40px_rgba(0,0,0,0.18)]
             transition-all duration-500
-            min-w-[320px]
+            min-w-[260px] max-w-[calc(100vw-1.5rem)]
             ${
               isScrolled
                 ? "bg-white/65 border-black/10 dark:bg-[#050816]/75 dark:border-white/10"
@@ -92,22 +92,19 @@ const Navbar = () => {
             }}
             className="flex items-center gap-3 group"
           >
-            <div className="relative w-10 h-10">
+            <div className="relative w-10 h-10 flex items-center justify-center">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 blur-md opacity-70 group-hover:scale-110 transition duration-300" />
-
-              <img
-                src={personalData.profile}
-                alt={personalData.name}
-                className="relative w-10 h-10 rounded-full object-cover border-2 border-white/40"
-              />
+              <div className="relative w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 flex items-center justify-center border-2 border-white/40 text-white font-bold text-sm tracking-tighter shadow-inner">
+                BJ
+              </div>
             </div>
 
             <div className="hidden sm:block leading-tight">
-              <span className="block font-bold text-gray-900 dark:text-white text-lg">
+              <span className="block font-bold text-gray-900 dark:text-white text-base md:text-lg">
                 {personalData.name}
               </span>
 
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p className="text-[11px] text-gray-500 dark:text-gray-400">
                 {personalData.designation}
               </p>
             </div>

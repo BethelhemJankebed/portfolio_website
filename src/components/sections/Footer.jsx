@@ -100,7 +100,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-2 text-sm text-purple-700 hover:text-indigo-700 transition-colors duration-200 font-medium dark:text-purple-300 dark:hover:text-purple-200"
             >
-              Download Resume ↗
+              View Resume ↗
             </a>
           </div>
         </div>
